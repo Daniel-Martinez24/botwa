@@ -30,23 +30,23 @@ def bot():
                 )
 
         elif '1' in user_msg:
-            msg.body("¿Qué tema de medio ambiente te gustaria aprender?")
-            msg.body("\n 1 .- Hacer composta \n  volver .- Para volver")
+            msg.body("¿Qué tema de medio ambiente te gustaria aprender?\n ")
+            msg.body("a .- Hacer composta \n  volver .- Para volver")
             nivel = 1
         elif '2' in user_msg:
-            msg.body("¿Qué tema de producción te gustaria aprender?")
-            msg.body("\n Aun en construcción \n volver .- Para volver")
+            msg.body("¿Qué tema de producción te gustaria aprender? \n ")
+            msg.body("Aun en construcción \n volver .- Para volver")
             nivel = 2
         elif '3' in user_msg:
-            msg.body("¿Qué tema de finanzas te gustaria aprender?")
-            msg.body("\n 1 .- La diferencia entre ahorro e inversión. \n 2.- Porque es importante invertir. \n 3.- Como se devalúa tú dinero si solo lo ahorras. \n volver .- Para volver")
+            msg.body("¿Qué tema de finanzas te gustaria aprender?\n")
+            msg.body(" a .- La diferencia entre ahorro e inversión. \n b.- Porque es importante invertir. \n c.- Como se devalúa tú dinero si solo lo ahorras. \n volver .- Para volver")
             nivel = 3
             
         elif 'cat' in user_msg:
             msg.media('https://cataas.com/cat')
         elif 'volver' in user_msg:
-            msg.body("Hola, bienvenida a nuestro menu, selecciona el area que te gustaría explorar, escribe el numero de area")
-            msg.body("\n 1 .- Cuidado de medio ambiente \n 2.- Producción \n 3.- Finanzas \n volver .- Para volver")
+            msg.body("Hola, bienvenida a nuestro menu, selecciona el area que te gustaría explorar, escribe el numero de area\n ")
+            msg.body("1 .- Cuidado de medio ambiente \n 2.- Producción \n 3.- Finanzas \n volver .- Para volver")
         else:
             msg.body("Asegurate de usar uno de los numeros del menú")
         
@@ -61,7 +61,7 @@ def bot():
 
     # medio amiente
     if nivel == 1:
-        if '1' in user_msg:
+        if 'a' in user_msg:
             msg.body("volver .- para regresar")
             msg.media('https://i.ibb.co/PxGrFMq/Whats-App-Image-2022-07-22-at-10-24-26-PM.jpg')
 
@@ -92,15 +92,15 @@ def bot():
 
         # finanzas
     if nivel == 3:
-        if '1' in user_msg:
+        if 'a' in user_msg:
             msg.body("La diferencia entre ahorro e inversión - texto")
             msg.body("volver .- Para volver")
 
-        elif '2' in user_msg:
+        elif 'b' in user_msg:
             msg.body(" Porque es importante invertir  - texto")
             msg.body("volver .- Para volver")
             nivel = 3
-        elif '3' in user_msg:
+        elif 'c' in user_msg:
             msg.body("Como se devalúa tú dinero si solo lo ahorras.  - texto")
             msg.body("volver .- Para volver")
             nivel = 3
